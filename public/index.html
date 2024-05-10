@@ -106,7 +106,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="#FC5858"
-          class="w-6 h-6"
+          class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
         >
           <path
             stroke-linecap="round"
@@ -143,7 +143,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="w-3 h-3"
+              class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
             >
               <path
                 d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
@@ -156,17 +156,92 @@
         <div
           class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
         >
-          <p class="text-slate-300 text-sm">اپل</p>
-          <div class="flex relative">
-            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg">اپل</p>
+          <div
+            x-data="{ color : 'violet', activeClass : 'ring-2 z-10 ring-gray-600'}"
+            class="flex items-center"
+          >
+            <div
+              @click="color = 'slate'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white bg-slate-800 rounded-full"
+              :class="color === 'slate' ? 'ring-2 z-10 ring-slate-800' : ''"
+            >
+              <svg
+                x-show="color ==='slate'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'orange'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-orange-500 rounded-full"
+              :class="color === 'orange'? 'ring-2 z-10 ring-orange-500' :''"
+            >
+              <svg
+                x-show="color ==='orange'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'violet'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
+              :class="color === 'violet' ? 'ring-2 z-10 ring-violet-800' : ''"
+            >
+              <svg
+                x-show="color ==='violet'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'yellow'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
+              :class="color === 'yellow' ? 'ring-2 z-10 ring-yellow-400' : ''"
+            >
+              <svg
+                x-show="color ==='yellow'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+            class="w-full inline-flex justify-start items-center text-sm md:text-md md:font-normal lg:text-lg mb-2 md:mb-3 lg:mb-4 xl:mb-6 truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
@@ -199,7 +274,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="w-3 h-3"
+              class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
             >
               <path
                 d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
@@ -212,17 +287,92 @@
         <div
           class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
         >
-          <p class="text-slate-300 text-sm">اپل</p>
-          <div class="flex relative">
-            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg">اپل</p>
+          <div
+            x-data="{ color : 'violet', activeClass : 'ring-2 z-10 ring-gray-600'}"
+            class="flex items-center"
+          >
+            <div
+              @click="color = 'slate'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white bg-slate-800 rounded-full"
+              :class="color === 'slate' ? 'ring-2 z-10 ring-slate-800' : ''"
+            >
+              <svg
+                x-show="color==='slate'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'orange'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-orange-500 rounded-full"
+              :class="color === 'orange'? 'ring-2 z-10 ring-orange-500' :''"
+            >
+              <svg
+                x-show="color ==='orange'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'violet'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
+              :class="color === 'violet' ? 'ring-2 z-10 ring-violet-800' : ''"
+            >
+              <svg
+                x-show="color ==='violet'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'yellow'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
+              :class="color === 'yellow' ? 'ring-2 z-10 ring-yellow-400' : ''"
+            >
+              <svg
+                x-show="color ==='yellow'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+            class="w-full inline-flex justify-start items-center text-sm md:text-md md:font-normal lg:text-lg mb-2 md:mb-3 lg:mb-4 xl:mb-6 truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
@@ -255,7 +405,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="w-3 h-3"
+              class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
             >
               <path
                 d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
@@ -268,17 +418,92 @@
         <div
           class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
         >
-          <p class="text-slate-300 text-sm">اپل</p>
-          <div class="flex relative">
-            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          <p class="text-slate-300 text-sm sm:text-base lg:text-md">اپل</p>
+          <div
+            x-data="{ color : 'violet', activeClass : 'ring-2 z-10 ring-gray-600'}"
+            class="flex items-center"
+          >
+            <div
+              @click="color = 'slate'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white bg-slate-800 rounded-full"
+              :class="color === 'slate' ? 'ring-2 z-10 ring-slate-800' : ''"
+            >
+              <svg
+                x-show="color==='slate'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'orange'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-orange-500 rounded-full"
+              :class="color === 'orange'? 'ring-2 z-10 ring-orange-500' :''"
+            >
+              <svg
+                x-show="color ==='orange'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'violet'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
+              :class="color === 'violet' ? 'ring-2 z-10 ring-violet-800' : ''"
+            >
+              <svg
+                x-show="color ==='violet'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'yellow'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
+              :class="color === 'yellow' ? 'ring-2 z-10 ring-yellow-400' : ''"
+            >
+              <svg
+                x-show="color ==='yellow'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+            class="w-full inline-flex justify-start items-center text-sm md:text-md md:font-normal lg:text-lg mb-2 md:mb-3 lg:mb-4 xl:mb-6 truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
@@ -311,7 +536,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="w-3 h-3"
+              class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
             >
               <path
                 d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
@@ -324,17 +549,92 @@
         <div
           class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
         >
-          <p class="text-slate-300 text-sm">اپل</p>
-          <div class="flex relative">
-            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg">اپل</p>
+          <div
+            x-data="{ color : 'violet', activeClass : 'ring-2 z-10 ring-gray-600'}"
+            class="flex items-center"
+          >
+            <div
+              @click="color = 'slate'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white bg-slate-800 rounded-full"
+              :class="color === 'slate' ? 'ring-2 z-10 ring-slate-800' : ''"
+            >
+              <svg
+                x-show="color==='slate'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'orange'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-orange-500 rounded-full"
+              :class="color === 'orange'? 'ring-2 z-10 ring-orange-500' :''"
+            >
+              <svg
+                x-show="color ==='orange'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'violet'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
+              :class="color === 'violet' ? 'ring-2 z-10 ring-violet-800' : ''"
+            >
+              <svg
+                x-show="color ==='violet'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'yellow'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
+              :class="color === 'yellow' ? 'ring-2 z-10 ring-yellow-400' : ''"
+            >
+              <svg
+                x-show="color ==='yellow'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+            class="w-full inline-flex justify-start items-center text-sm md:text-md md:font-normal lg:text-lg mb-2 md:mb-3 lg:mb-4 xl:mb-6 truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
@@ -367,7 +667,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="w-3 h-3"
+              class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
             >
               <path
                 d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
@@ -380,17 +680,92 @@
         <div
           class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
         >
-          <p class="text-slate-300 text-sm">اپل</p>
-          <div class="flex relative">
-            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg">اپل</p>
+          <div
+            x-data="{ color : 'violet', activeClass : 'ring-2 z-10 ring-gray-600'}"
+            class="flex items-center"
+          >
+            <div
+              @click="color = 'slate'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white bg-slate-800 rounded-full"
+              :class="color === 'slate' ? 'ring-2 z-10 ring-slate-800' : ''"
+            >
+              <svg
+                x-show="color==='slate'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'orange'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-orange-500 rounded-full"
+              :class="color === 'orange'? 'ring-2 z-10 ring-orange-500' :''"
+            >
+              <svg
+                x-show="color ==='orange'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'violet'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
+              :class="color === 'violet' ? 'ring-2 z-10 ring-violet-800' : ''"
+            >
+              <svg
+                x-show="color ==='violet'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'yellow'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
+              :class="color === 'yellow' ? 'ring-2 z-10 ring-yellow-400' : ''"
+            >
+              <svg
+                x-show="color ==='yellow'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+            class="w-full inline-flex justify-start items-center text-sm md:text-md md:font-normal lg:text-lg mb-2 md:mb-3 lg:mb-4 xl:mb-6 truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
@@ -423,7 +798,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="w-3 h-3"
+              class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
             >
               <path
                 d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
@@ -436,17 +811,92 @@
         <div
           class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
         >
-          <p class="text-slate-300 text-sm">اپل</p>
-          <div class="flex relative">
-            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg">اپل</p>
+          <div
+            x-data="{ color : 'violet', activeClass : 'ring-2 z-10 ring-gray-600'}"
+            class="flex items-center"
+          >
+            <div
+              @click="color = 'slate'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white bg-slate-800 rounded-full"
+              :class="color === 'slate' ? 'ring-2 z-10 ring-slate-800' : ''"
+            >
+              <svg
+                x-show="color==='slate'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'orange'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-orange-500 rounded-full"
+              :class="color === 'orange'? 'ring-2 z-10 ring-orange-500' :''"
+            >
+              <svg
+                x-show="color ==='orange'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'violet'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
+              :class="color === 'violet' ? 'ring-2 z-10 ring-violet-800' : ''"
+            >
+              <svg
+                x-show="color ==='violet'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'yellow'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
+              :class="color === 'yellow' ? 'ring-2 z-10 ring-yellow-400' : ''"
+            >
+              <svg
+                x-show="color ==='yellow'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+            class="w-full inline-flex justify-start items-center text-sm md:text-md md:font-normal lg:text-lg mb-2 md:mb-3 lg:mb-4 xl:mb-6 truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
@@ -479,7 +929,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="w-3 h-3"
+              class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
             >
               <path
                 d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
@@ -492,17 +942,92 @@
         <div
           class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
         >
-          <p class="text-slate-300 text-sm">اپل</p>
-          <div class="flex relative">
-            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg">اپل</p>
+          <div
+            x-data="{ color : 'violet', activeClass : 'ring-2 z-10 ring-gray-600'}"
+            class="flex items-center"
+          >
+            <div
+              @click="color = 'slate'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white bg-slate-800 rounded-full"
+              :class="color === 'slate' ? 'ring-2 z-10 ring-slate-800' : ''"
+            >
+              <svg
+                x-show="color==='slate'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'orange'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-orange-500 rounded-full"
+              :class="color === 'orange'? 'ring-2 z-10 ring-orange-500' :''"
+            >
+              <svg
+                x-show="color ==='orange'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'violet'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
+              :class="color === 'violet' ? 'ring-2 z-10 ring-violet-800' : ''"
+            >
+              <svg
+                x-show="color ==='violet'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'yellow'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
+              :class="color === 'yellow' ? 'ring-2 z-10 ring-yellow-400' : ''"
+            >
+              <svg
+                x-show="color ==='yellow'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+            class="w-full inline-flex justify-start items-center text-sm md:text-md md:font-normal lg:text-lg mb-2 md:mb-3 lg:mb-4 xl:mb-6 truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
@@ -535,7 +1060,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              class="w-3 h-3"
+              class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
             >
               <path
                 d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
@@ -548,17 +1073,92 @@
         <div
           class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
         >
-          <p class="text-slate-300 text-sm">اپل</p>
-          <div class="flex relative">
-            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
-            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg">اپل</p>
+          <div
+            x-data="{ color : 'violet', activeClass : 'ring-2 z-10 ring-gray-600'}"
+            class="flex items-center"
+          >
+            <div
+              @click="color = 'slate'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white bg-slate-800 rounded-full"
+              :class="color === 'slate' ? 'ring-2 z-10 ring-slate-800' : ''"
+            >
+              <svg
+                x-show="color==='slate'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'orange'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-orange-500 rounded-full"
+              :class="color === 'orange'? 'ring-2 z-10 ring-orange-500' :''"
+            >
+              <svg
+                x-show="color ==='orange'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'violet'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
+              :class="color === 'violet' ? 'ring-2 z-10 ring-violet-800' : ''"
+            >
+              <svg
+                x-show="color ==='violet'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'yellow'"
+              class="inline-flex items-center justify-center w-5 h-5 sm:h-7 sm:w-7 lg:w-8 lg:h-8 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
+              :class="color === 'yellow' ? 'ring-2 z-10 ring-yellow-400' : ''"
+            >
+              <svg
+                x-show="color ==='yellow'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="w-3 h-3 sm:h-4 sm:w-4 lg:w-5 lg:h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+            class="w-full inline-flex justify-start items-center text-sm md:text-md md:font-normal lg:text-lg mb-2 md:mb-3 lg:mb-4 xl:mb-6 truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
@@ -575,5 +1175,6 @@
         </div>
       </div>
     </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
   </body>
 </html>
