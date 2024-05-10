@@ -8,7 +8,7 @@
   </head>
   <body class="bg-gray-100 container mx-auto px-4">
     <!-- App Bar -->
-    <div class="flex items-center justify-between mb-8 mt-10 w-full">
+    <div class="md:hidden flex items-center justify-between mb-8 mt-10 w-full">
       <div class="flex-grow-0 shrink">
         <img src="/assests/images/img/Logo.png" alt="" />
       </div>
@@ -40,7 +40,9 @@
     </div>
 
     <!-- filter - sort mobile Section  -->
-    <div class="w-full flex justify-center items-center gap-x-2 mb-10">
+    <div
+      class="md:hidden w-full flex justify-center items-center gap-x-2 mb-10"
+    >
       <div
         class="flex items-center justify-start h-full bg-stone-50 shadow-sm rounded-lg w-1/2 px-2 py-2"
       >
@@ -122,7 +124,9 @@
     </div>
 
     <!-- Products list -->
-    <div class="grid grid-cols-2 gap-2">
+    <div
+      class="grid grid-cols-1 min-[380px]:grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5"
+    >
       <div class="bg-stone-50 rounded-2xl p-2">
         <!-- product Header -->
         <div
@@ -149,7 +153,9 @@
         </div>
 
         <!-- product Body -->
-        <div class="flex justify-between items-center w-full mt-5 mb-3 px-1">
+        <div
+          class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
+        >
           <p class="text-slate-300 text-sm">اپل</p>
           <div class="flex relative">
             <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
@@ -160,20 +166,20 @@
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-sm mb-2 truncate"
+            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
           <p
-            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 text-md"
+            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 min-[468px]:text-base text-sm lg:text-lg"
           >
             <span class="ml-1">۴۸,۲۵۰,۰۰۰</span>تومان
           </p>
-          <a
-            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 cursor-pointer border-t w-full border-slate-500/20"
-            href="#"
-            >مشاهده و سفارش</a
+          <button
+            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 pt-3 cursor-pointer border-t w-full border-slate-500/20"
           >
+            مشاهده و سفارش
+          </button>
         </div>
       </div>
       <!-- product  -->
@@ -203,7 +209,9 @@
         </div>
 
         <!-- product Body -->
-        <div class="flex justify-between items-center w-full mt-5 mb-3 px-1">
+        <div
+          class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
+        >
           <p class="text-slate-300 text-sm">اپل</p>
           <div class="flex relative">
             <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
@@ -214,20 +222,356 @@
         </div>
         <div class="px-1">
           <p
-            class="w-full inline-flex justify-start items-center font-bold text-sm mb-2 truncate"
+            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
           >
             ساعت هوشمند اپل سری ۶
           </p>
           <p
-            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 text-md"
+            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 min-[468px]:text-base text-sm lg:text-lg"
           >
             <span class="ml-1">۴۸,۲۵۰,۰۰۰</span>تومان
           </p>
-          <a
-            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 cursor-pointer border-t w-full border-slate-500/20"
-            href="#"
-            >مشاهده و سفارش</a
+          <button
+            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 pt-3 cursor-pointer border-t w-full border-slate-500/20"
           >
+            مشاهده و سفارش
+          </button>
+        </div>
+      </div>
+      <!-- product  -->
+      <div class="bg-stone-50 rounded-2xl p-2">
+        <!-- product Header -->
+        <div
+          class="bg-slate-200 rounded-xl flex items-center justify-center px-14 py-4 relative"
+        >
+          <img
+            class="block max-h-28"
+            src="/assests/images/img/applewatch.png"
+            alt=""
+          />
+          <span
+            class="absolute text-red-400 bg-slate-400 top-3 right-3 rounded-full inline-block px-2 py-2"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-3 h-3"
+            >
+              <path
+                d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <!-- product Body -->
+        <div
+          class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
+        >
+          <p class="text-slate-300 text-sm">اپل</p>
+          <div class="flex relative">
+            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          </div>
+        </div>
+        <div class="px-1">
+          <p
+            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+          >
+            ساعت هوشمند اپل سری ۶
+          </p>
+          <p
+            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 min-[468px]:text-base text-sm lg:text-lg"
+          >
+            <span class="ml-1">۴۸,۲۵۰,۰۰۰</span>تومان
+          </p>
+          <button
+            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 pt-3 cursor-pointer border-t w-full border-slate-500/20"
+          >
+            مشاهده و سفارش
+          </button>
+        </div>
+      </div>
+      <!-- product  -->
+      <div class="bg-stone-50 rounded-2xl p-2">
+        <!-- product Header -->
+        <div
+          class="bg-slate-200 rounded-xl flex items-center justify-center px-14 py-4 relative"
+        >
+          <img
+            class="block max-h-28"
+            src="/assests/images/img/Cart/1.png"
+            alt=""
+          />
+          <span
+            class="absolute text-red-400 bg-slate-400 top-3 right-3 rounded-full inline-block px-2 py-2"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-3 h-3"
+            >
+              <path
+                d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <!-- product Body -->
+        <div
+          class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
+        >
+          <p class="text-slate-300 text-sm">اپل</p>
+          <div class="flex relative">
+            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          </div>
+        </div>
+        <div class="px-1">
+          <p
+            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+          >
+            ساعت هوشمند اپل سری ۶
+          </p>
+          <p
+            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 min-[468px]:text-base text-sm lg:text-lg"
+          >
+            <span class="ml-1">۴۸,۲۵۰,۰۰۰</span>تومان
+          </p>
+          <button
+            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 pt-3 cursor-pointer border-t w-full border-slate-500/20"
+          >
+            مشاهده و سفارش
+          </button>
+        </div>
+      </div>
+      <!-- product  -->
+      <div class="bg-stone-50 rounded-2xl p-2">
+        <!-- product Header -->
+        <div
+          class="bg-slate-200 rounded-xl flex items-center justify-center px-14 py-4 relative"
+        >
+          <img
+            class="block max-h-28"
+            src="/assests/images/img/applewatch.png"
+            alt=""
+          />
+          <span
+            class="absolute text-red-400 bg-slate-400 top-3 right-3 rounded-full inline-block px-2 py-2"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-3 h-3"
+            >
+              <path
+                d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <!-- product Body -->
+        <div
+          class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
+        >
+          <p class="text-slate-300 text-sm">اپل</p>
+          <div class="flex relative">
+            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          </div>
+        </div>
+        <div class="px-1">
+          <p
+            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+          >
+            ساعت هوشمند اپل سری ۶
+          </p>
+          <p
+            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 min-[468px]:text-base text-sm lg:text-lg"
+          >
+            <span class="ml-1">۴۸,۲۵۰,۰۰۰</span>تومان
+          </p>
+          <button
+            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 pt-3 cursor-pointer border-t w-full border-slate-500/20"
+          >
+            مشاهده و سفارش
+          </button>
+        </div>
+      </div>
+      <!-- product  -->
+      <div class="bg-stone-50 rounded-2xl p-2">
+        <!-- product Header -->
+        <div
+          class="bg-slate-200 rounded-xl flex items-center justify-center px-14 py-4 relative"
+        >
+          <img
+            class="block max-h-28"
+            src="/assests/images/img/Cart/1.png"
+            alt=""
+          />
+          <span
+            class="absolute text-red-400 bg-slate-400 top-3 right-3 rounded-full inline-block px-2 py-2"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-3 h-3"
+            >
+              <path
+                d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <!-- product Body -->
+        <div
+          class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
+        >
+          <p class="text-slate-300 text-sm">اپل</p>
+          <div class="flex relative">
+            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          </div>
+        </div>
+        <div class="px-1">
+          <p
+            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+          >
+            ساعت هوشمند اپل سری ۶
+          </p>
+          <p
+            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 min-[468px]:text-base text-sm lg:text-lg"
+          >
+            <span class="ml-1">۴۸,۲۵۰,۰۰۰</span>تومان
+          </p>
+          <button
+            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 pt-3 cursor-pointer border-t w-full border-slate-500/20"
+          >
+            مشاهده و سفارش
+          </button>
+        </div>
+      </div>
+      <!-- product  -->
+      <div class="bg-stone-50 rounded-2xl p-2">
+        <!-- product Header -->
+        <div
+          class="bg-slate-200 rounded-xl flex items-center justify-center px-14 py-4 relative"
+        >
+          <img
+            class="block max-h-28"
+            src="/assests/images/img/applewatch.png"
+            alt=""
+          />
+          <span
+            class="absolute text-red-400 bg-slate-400 top-3 right-3 rounded-full inline-block px-2 py-2"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-3 h-3"
+            >
+              <path
+                d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <!-- product Body -->
+        <div
+          class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
+        >
+          <p class="text-slate-300 text-sm">اپل</p>
+          <div class="flex relative">
+            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          </div>
+        </div>
+        <div class="px-1">
+          <p
+            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+          >
+            ساعت هوشمند اپل سری ۶
+          </p>
+          <p
+            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 min-[468px]:text-base text-sm lg:text-lg"
+          >
+            <span class="ml-1">۴۸,۲۵۰,۰۰۰</span>تومان
+          </p>
+          <button
+            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 pt-3 cursor-pointer border-t w-full border-slate-500/20"
+          >
+            مشاهده و سفارش
+          </button>
+        </div>
+      </div>
+      <!-- product  -->
+      <div class="bg-stone-50 rounded-2xl p-2">
+        <!-- product Header -->
+        <div
+          class="bg-slate-200 rounded-xl flex items-center justify-center px-14 py-4 relative"
+        >
+          <img
+            class="block max-h-28"
+            src="/assests/images/img/Cart/1.png"
+            alt=""
+          />
+          <span
+            class="absolute text-red-400 bg-slate-400 top-3 right-3 rounded-full inline-block px-2 py-2"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-3 h-3"
+            >
+              <path
+                d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <!-- product Body -->
+        <div
+          class="flex justify-between items-center max-w-full mt-5 mb-3 px-1"
+        >
+          <p class="text-slate-300 text-sm">اپل</p>
+          <div class="flex relative">
+            <span class="inline-block p-1.5 bg-slate-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-orange-500 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-violet-800 rounded-full"></span>
+            <span class="inline-block p-1.5 bg-yellow-400 rounded-full"></span>
+          </div>
+        </div>
+        <div class="px-1">
+          <p
+            class="w-full inline-flex justify-start items-center font-bold text-xs min-[468px]:text-sm mb-2 md:mb-3 lg:mb-4 xl:mb- truncate"
+          >
+            ساعت هوشمند اپل سری ۶
+          </p>
+          <p
+            class="w-full inline-flex justify-end items-center text-orange-600 mb-4 min-[468px]:text-base text-sm lg:text-lg"
+          >
+            <span class="ml-1">۴۸,۲۵۰,۰۰۰</span>تومان
+          </p>
+          <button
+            class="font-bold text-md inline-flex justify-center items-center text-orange-500 p-2 pt-3 cursor-pointer border-t w-full border-slate-500/20"
+          >
+            مشاهده و سفارش
+          </button>
         </div>
       </div>
     </div>
