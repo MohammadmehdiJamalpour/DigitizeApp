@@ -803,9 +803,9 @@
             <button
               @click="sort = 1"
               :class="sort === 1 ? activeClass : ''"
-              class="p-3 text-xs xl:px-4 hover:bg-gray-100 rounded-xl 2xl:px-5 text-gray-400 truncate relative"
+              class="p-3 text-xs xl:text-sm xl:px-4 hover:bg-gray-100 rounded-xl 2xl:px-5 text-gray-400 truncate relative"
             >
-              <span> محبوب ترین محصول</span>
+              <span> محبوب ترین</span>
               <span
                 x-show="sort === 1"
                 class="h-1 w-1 rounded-full absolute top-1 left-1 bg-orange-600"
@@ -814,9 +814,9 @@
             <button
               @click="sort = 2"
               :class="sort === 2 ? activeClass : ' ' "
-              class="p-3 text-xs lg:text-sm xl:px-4 hover:bg-gray-100 rounded-xl 2xl:px-5 text-gray-400 truncate relative"
+              class="p-3 text-xs xl:text-sm xl:px-4 hover:bg-gray-100 rounded-xl 2xl:px-5 text-gray-400 truncate relative"
             >
-              <span> پر بازدید ترین محصول</span>
+              <span> پر بازدید ترین</span>
 
               <span
                 x-show="sort === 2"
@@ -826,9 +826,9 @@
             <button
               @click="sort = 3"
               :class="sort === 3 ? activeClass : ' ' "
-              class="p-3 text-xs lg:text-sm xl:px-4 hover:bg-gray-100 rounded-xl 2xl:px-5 text-gray-400 truncate relative"
+              class="p-3 text-xs xl:text-sm xl:px-4 hover:bg-gray-100 rounded-xl 2xl:px-5 text-gray-400 truncate relative"
             >
-              <span> گران ترین محصول</span>
+              <span> گران ترین</span>
 
               <span
                 x-show="sort === 3"
@@ -838,9 +838,9 @@
             <button
               @click="sort = 4"
               :class="sort === 4 ? activeClass : ' ' "
-              class="p-3 text-xs lg:text-sm xl:px-4 hover:bg-gray-100 rounded-xl 2xl:px-5 text-gray-400 truncate relative"
+              class="p-3 text-xs xl:text-sm xl:px-4 hover:bg-gray-100 rounded-xl 2xl:px-5 text-gray-400 truncate relative"
             >
-              <span> ارزان ترین محصول</span>
+              <span>ارزان ترین</span>
 
               <span
                 x-show="sort === 4"
@@ -1006,7 +1006,7 @@
         </div>
       </div>
 
-      <div class="min-h"></div>
+      <div class="min-h-20 w-full bg-stone-50 md:hidden"></div>
     </div>
     <script src="//unpkg.com/alpinejs" defer></script>
   </body>
