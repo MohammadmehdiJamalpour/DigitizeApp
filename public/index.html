@@ -214,7 +214,7 @@
       >
         <!-- side Bar -->
         <div
-          class="hidden md:flex bg-stone-50 flex-col justify-start items-center p-6 rounded-2xl col-start-1 col-span-3 xl:col-span-1 row-span-2"
+          class="hidden md:flex sticky top-24 max-h-[calc(100vh_-_160px)] overflow-auto bg-stone-50 flex-col justify-start items-center p-6 rounded-2xl col-start-1 col-span-3 xl:col-span-1 row-span-2"
         >
           <div class="w-full xl:p-1">
             <!-- Types of products -->
@@ -237,7 +237,7 @@
                   @click="type = 1"
                   :class="type === 1 ? activeClass : ''"
                   url="#"
-                  class="flex items-center text-gray-400 p-0.5 lg:p-1.5 xl:py-3 xl:px-2 w-full hover:bg-gray-100 rounded-xl cursor-pointer"
+                  class="flex items-center text-gray-400 p-0.5 lg:p-1.5 xl:py-3 xl:px-1.5w-full hover:bg-gray-100 rounded-xl cursor-pointer"
                 >
                   <span
                     class="inline-block mb-2 bg-gray-200 relative w-5 h-5 xl:w-6 xl:h-6 rounded-full"
@@ -268,7 +268,7 @@
                   @click="type = 2"
                   :class="type === 2 ? activeClass : ''"
                   url="#"
-                  class="flex items-center text-gray-400 p-1 lg:p-1.5 xl:py-3 xl:px-2 w-full hover:bg-gray-100 rounded-xl cursor-pointer"
+                  class="flex items-center text-gray-400 p-1 lg:p-1.5 xl:py-3 xl:px-1.5w-full hover:bg-gray-100 rounded-xl cursor-pointer"
                 >
                   <span
                     class="inline-block mb-2 bg-gray-200 relative w-5 h-5 xl:w-6 xl:h-6 rounded-full"
@@ -318,7 +318,7 @@
                   @click="type = 3"
                   :class="type === 3 ? activeClass : ''"
                   url="#"
-                  class="flex items-center text-gray-400 p-0.5 lg:p-1.5 xl:py-3 xl:px-2 w-full hover:bg-gray-100 rounded-xl cursor-pointer"
+                  class="flex items-center text-gray-400 p-0.5 lg:p-1.5 xl:py-3 xl:px-1.5w-full hover:bg-gray-100 rounded-xl cursor-pointer"
                 >
                   <span
                     class="inline-block mb-2 bg-gray-200 relative w-5 h-5 xl:w-6 xl:h-6 rounded-full"
@@ -391,7 +391,7 @@
                 <!-- Header -->
                 <div
                   @click="isOpenBrand = !isOpenBrand"
-                  class="relative hover:bg-gray-100 rounded-lg p-1.5 h-full flex items-center w-full"
+                  class="relative hover:bg-gray-100 rounded-lg py-1 h-full flex items-center justify-between w-full"
                 >
                   <span
                     class="inline-block text-slate-700 absolute lg:my-1 xl:my-2 top-0.5 mb-2 bg-gray-200 w-5 h-5 xl:w-6 xl:h-6 rounded-full"
@@ -427,7 +427,7 @@
                     </svg>
                   </span>
                   <a
-                    class="pr-3 text-slate-800 lg:pr-4 lg:p-1 xl:p-2 flex justify-between lg:justify-start items-center w-full cursor-pointer"
+                    class="pr-3 text-slate-800 lg:pr-2 lg:p-1 xl:py-2 flex justify-between lg:justify-start items-center w-full cursor-pointer"
                   >
                     <p
                       class="mr-4 xl:mr-8 text-xs lg:text-sm xl:text-base truncate"
@@ -440,7 +440,7 @@
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="w-3 h-3 lg:w-4 lg:h-4 lg:mr-3 xl:mr xl:w-5 xl:h-5 transition-all duration-500"
+                      class="w-3 h-3 lg:mr-3 xl:mr xl:w-5 xl:h-5 transition-all duration-500"
                       :class="isOpenBrand ? 'rotate-180' : ''"
                     >
                       <path
@@ -512,7 +512,7 @@
                 <!-- Header -->
                 <div
                   @click="isColorOpen = !isColorOpen"
-                  class="relative hover:bg-gray-100 rounded-lg p-1.5 h-full flex items-center w-full"
+                  class="relative hover:bg-gray-100 rounded-lg py-1.5 h-full flex items-center justify-between w-full"
                 >
                   <span
                     class="inline-block text-slate-700 absolute lg:my-1 xl:my-2 top-0.5 mb-2 bg-gray-200 w-5 h-5 xl:w-6 xl:h-6 rounded-full"
@@ -563,7 +563,7 @@
                     </svg>
                   </span>
                   <a
-                    class="pr-3 text-slate-800 lg:pr-4 lg:p-1 xl:p-2 flex justify-between lg:justify-start items-center w-full cursor-pointer"
+                    class="pr-3 text-slate-800 lg:pr-2 lg:py-1 xl:py-2 flex justify-start lg:justify-start items-center w-full cursor-pointer"
                   >
                     <p
                       class="mr-4 xl:mr-8 text-xs lg:text-sm xl:text-base truncate"
@@ -576,7 +576,7 @@
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="w-3 h-3 lg:w-4 lg:h-4 lg:mr-3 xl:mr xl:w-5 xl:h-5 transition-all duration-500"
+                      class="w-3 h-3 lg:mr-2 xl:w-5 xl:h-5 transition-all duration-500"
                       :class="isColorOpen ? 'rotate-180' : ''"
                     >
                       <path
@@ -663,7 +663,7 @@
                 <!-- Header -->
                 <div
                   @click="isPriceOpen = !isPriceOpen"
-                  class="relative hover:bg-gray-100 rounded-lg p-1.5 h-full flex items-center w-full"
+                  class="relative hover:bg-gray-100 rounded-lg py-1.5 h-full flex justify-between items-center w-full"
                 >
                   <span
                     class="inline-block absolute text-slate-700 lg:my-1 xl:my-2 top-0.5 mb-2 bg-gray-200 w-5 h-5 xl:w-6 xl:h-6 rounded-full"
@@ -707,7 +707,7 @@
                     </svg>
                   </span>
                   <a
-                    class="pr-3 text-slate-800 lg:pr-4 lg:p-1 xl:p-2 flex justify-between lg:justify-start items-center w-full cursor-pointer"
+                    class="pr-3 text-slate-800 lg:pr-2 lg:p-1 xl:p-2 flex justify-between lg:justify-start items-center w-full cursor-pointer"
                   >
                     <p
                       class="mr-4 xl:mr-8 text-xs lg:text-sm xl:text-base truncate"
@@ -720,7 +720,7 @@
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="w-3 h-3 lg:w-4 lg:h-4 lg:mr-3 xl:mr xl:w-5 xl:h-5 transition-all duration-500"
+                      class="w-3 h-3 lg:mr-1 xl:w-5 xl:h-5 transition-all duration-500"
                       :class="isPriceOpen ? 'rotate-180' : ''"
                     >
                       <path
