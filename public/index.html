@@ -1024,6 +1024,7 @@
           width="32"
           height="32"
           viewBox="0 0 32 32"
+          class=""
           fill="none"
         >
           <path
@@ -1031,7 +1032,7 @@
             fill="currentColor"
           />
         </svg>
-        <p x-show="tab===1" class="mr-1 font-bold text-lg">خانه</p>
+        <p x-show="tab===1" class="mr-1.5 font-bold text-lg">خانه</p>
       </a>
       <a
         @click="tab=2"
@@ -1043,6 +1044,7 @@
           width="34"
           height="34"
           viewBox="0 0 34 34"
+          class="w-6 h-6 xs:w-9 xs:h-9"
           fill="none"
         >
           <path
@@ -1064,7 +1066,7 @@
         </svg>
         <p
           x-show="tab===2"
-          class="font-bold xs:mr-1 truncate text-xs xs:text-lg"
+          class="xs:mr-1.5 font-bold truncate text-sm xs:text-lg"
         >
           دسته بندی
         </p>
@@ -1079,6 +1081,7 @@
           width="34"
           height="34"
           viewBox="0 0 34 34"
+          class="w-7 h-7 xs:w-10 xs:h-10"
           fill="none"
         >
           <path
@@ -1086,7 +1089,10 @@
             fill="currentColor"
           />
         </svg>
-        <p x-show="tab===3" class="text-xs xs:text-lg truncate font-bold">
+        <p
+          x-show="tab===3"
+          class="text-sm mr-1.5 xs:text-lg truncate font-bold"
+        >
           سبد خرید
         </p>
       </a>
@@ -1100,6 +1106,7 @@
           width="54"
           height="54"
           viewBox="0 0 54 54"
+          class="w-10 h-10 xs:w-16 xs:h-16"
           fill="none"
         >
           <path
@@ -1107,8 +1114,8 @@
             fill="currentColor"
           />
         </svg>
-        <p x-show="tab===4" class="text-xs -mr-2 xs:-mr-0 xs:text-lg font-bold">
-          مورد علاقه
+        <p x-show="tab===4" class="text-xs pb-1 xs:text-lg font-bold">
+          علاقه مندی ها
         </p>
       </a>
     </nav>
