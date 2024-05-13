@@ -1163,6 +1163,9 @@ video {
   .lg\:mr-1\.5{
     margin-right: 0.375rem;
   }
+  .lg\:mr-6{
+    margin-right: 1.5rem;
+  }
   .lg\:h-4{
     height: 1rem;
   }
@@ -1343,6 +1346,10 @@ video {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+  .xl\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 @media (min-width: 1536px){
   .\32xl\:mr-9{
@@ -1351,5 +1358,9 @@ video {
   .\32xl\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+  .\32xl\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
