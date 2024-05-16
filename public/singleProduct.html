@@ -13,7 +13,7 @@
     />
     <title>Document</title>
   </head>
-  <body class="bg-gray-100">
+  <body class="w-full bg-gray-100">
     <!-- container -->
     <div class="bg-gray-100 container mx-auto px-4">
       <!-- app bar -->
@@ -110,24 +110,26 @@
         </div>
         <!-- product details   -->
         <div class="flex flex-col items-center justify-center">
-          <p class="text-2xl truncate p-1 xs:text-3xl">
+          <p class="text-2xl truncate font-bold p-1 xs:text-3xl">
             گوشی آیفون ۱۳ ۱۲۸ گیگابایت
           </p>
-          <p class="font-sans text-gray-400 text-2xl mt-3">
+          <p class="font-sans text-gray-400 text-xl xs:text-2xl mt-3">
             Apple Iphone 13 128 GB
           </p>
+
+          <!-- colors selection -->
           <div
-            class="flex items-center w-full text-slate-800 justify-between px-4 py-2 xs:px-5 xs:py-3 bg-transparent"
+            class="flex items-center w-full text-slate-800 justify-between px-4 py-3 xs:px-4 xs:py-4 bg-transparent"
           >
             <p class="text-xl truncate xs:text-2xl">انتخاب رنگ:</p>
             <div
-              x-data="{ color : 'sky', activeClass : 'ring-2 z-10 ring-orange00'}"
+              x-data="{ color : 'sky', activeClass : 'ring-4 z-10 ring-slate-800'}"
               class="flex items-center"
             >
               <div
                 @click="color = 'slate'"
-                class="inline-flex items-center justify-center w-9 h-9 sm:h-11 sm:w-11 lg:w-11 lg:h-11 xl:w-12 xl:h-12 cursor-pointer border border-white bg-slate-800 rounded-full"
-                :class="color === 'slate' ? 'ring-2 z-10 ring-orange-500' : ''"
+                class="inline-flex items-center justify-center w-8 h-8 sm:h-9 sm:w-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 cursor-pointer border border-white bg-slate-800 rounded-full"
+                :class="color === 'slate' ? 'ring-4 z-10 ring-slate-800' : ''"
               >
                 <svg
                   x-show="color ==='slate'"
@@ -145,8 +147,8 @@
               </div>
               <div
                 @click="color = 'sky'"
-                class="inline-flex items-center justify-center w-9 h-9 sm:h-11 sm:w-11 lg:w-11 lg:h-11 xl:w-12 xl:h-12 cursor-pointer border border-white -mr-1.5 bg-sky-500 rounded-full"
-                :class="color === 'sky'? 'ring-2 z-10 ring-orange-500' :''"
+                class="inline-flex items-center justify-center w-8 h-8 sm:h-9 sm:w-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 cursor-pointer border border-white -mr-1.5 bg-sky-500 rounded-full"
+                :class="color === 'sky'? 'ring-4 z-10 ring-slate-800' :''"
               >
                 <svg
                   x-show="color ==='sky'"
@@ -164,8 +166,8 @@
               </div>
               <div
                 @click="color = 'violet'"
-                class="inline-flex items-center justify-center w-9 h-9 sm:h-11 sm:w-11 lg:w-11 lg:h-11 xl:w-12 xl:h-12 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
-                :class="color === 'violet' ? 'ring-2 z-10 ring-orange-500' : ''"
+                class="inline-flex items-center justify-center w-8 h-8 sm:h-9 sm:w-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 cursor-pointer border border-white -mr-1.5 bg-violet-800 rounded-full"
+                :class="color === 'violet' ? 'ring-4 z-10 ring-slate-800' : ''"
               >
                 <svg
                   x-show="color ==='violet'"
@@ -183,8 +185,8 @@
               </div>
               <div
                 @click="color = 'yellow'"
-                class="inline-flex items-center justify-center w-9 h-9 sm:h-11 sm:w-11 lg:w-11 lg:h-11 xl:w-12 xl:h-12 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
-                :class="color === 'yellow' ? 'ring-2 z-10 ring-orange-500' : ''"
+                class="inline-flex items-center justify-center w-8 h-8 sm:h-9 sm:w-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 cursor-pointer border border-white -mr-1.5 bg-yellow-400 rounded-full"
+                :class="color === 'yellow' ? 'ring-4 z-10 ring-slate-800' : ''"
               >
                 <svg
                   x-show="color ==='yellow'"
@@ -202,8 +204,8 @@
               </div>
               <div
                 @click="color = 'lime'"
-                class="inline-flex items-center justify-center w-9 h-9 sm:h-11 sm:w-11 lg:w-11 lg:h-11 xl:w-12 xl:h-12 cursor-pointer border border-white -mr-1.5 bg-lime-400 rounded-full"
-                :class="color === 'lime' ? 'ring-2 z-10 ring-orange-500' : ''"
+                class="inline-flex items-center justify-center w-8 h-8 sm:h-9 sm:w-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12 cursor-pointer border border-white -mr-1.5 bg-lime-400 rounded-full"
+                :class="color === 'lime' ? 'ring-4 z-10 ring-slate-800' : ''"
               >
                 <svg
                   x-show="color ==='lime'"
@@ -222,10 +224,164 @@
             </div>
           </div>
         </div>
+
         <!-- product seller information  -->
+        <div class="p-4 grid grid-cols-2 grid-rows-2 gap-2 text-slate-800">
+          <div class="flex items-center gap-x-1">
+            <span
+              class="inline-block mb-2 bg-gray-200 relative w-5 h-5 xl:w-6 xl:h-6 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                class="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 absolute top-1 xl:top-1.5 z-10 right-1 xl:right-1.5"
+                fill="none"
+              >
+                <path
+                  d="M1.75586 6.54492V9.16409C1.75586 11.7833 2.80586 12.8333 5.42503 12.8333H8.56919C11.1884 12.8333 12.2384 11.7833 12.2384 9.16409V6.54492"
+                  stroke="currentColor"
+                  stroke-width="0.875"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.00012 6.99935C8.06762 6.99935 8.85512 6.13018 8.75012 5.06268L8.36512 1.16602H5.64095L5.25012 5.06268C5.14512 6.13018 5.93262 6.99935 7.00012 6.99935Z"
+                  stroke="currentColor"
+                  stroke-width="0.875"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.681 6.99935C11.8593 6.99935 12.7226 6.04268 12.606 4.87018L12.4426 3.26602C12.2326 1.74935 11.6493 1.16602 10.121 1.16602H8.3418L8.75013 5.25518C8.8493 6.21768 9.71846 6.99935 10.681 6.99935Z"
+                  stroke="currentColor"
+                  stroke-width="0.875"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.29005 6.99935C4.25255 6.99935 5.12172 6.21768 5.21505 5.25518L5.34339 3.96602L5.62339 1.16602H3.84422C2.31589 1.16602 1.73255 1.74935 1.52255 3.26602L1.36505 4.87018C1.24839 6.04268 2.11172 6.99935 3.29005 6.99935Z"
+                  stroke="currentColor"
+                  stroke-width="0.875"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.00008 9.91602C6.02591 9.91602 5.54175 10.4002 5.54175 11.3743V12.8327H8.45841V11.3743C8.45841 10.4002 7.97425 9.91602 7.00008 9.91602Z"
+                  stroke="currentColor"
+                  stroke-width="0.875"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <p class="text-xs 435px:text-sm sm::text-base mr-1">فروشنده:</p>
+            <span class="text-xs 435px:text-sm truncate">دیجیتایز</span>
+          </div>
+
+          <div class="flex items-center gap-x-1">
+            <span
+              class="inline-block mb-2 bg-gray-200 relative w-5 h-5 xl:w-6 xl:h-6 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                class="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 absolute top-1 xl:top-1.5 z-10 right-1 xl:right-1.5"
+                fill="none"
+              >
+                <path
+                  d="M9.99992 1.33301V7.99967C9.99992 8.73301 9.39992 9.33301 8.66659 9.33301H1.33325V5.07967C1.81992 5.65967 2.5666 6.01967 3.39327 5.99967C4.0666 5.98634 4.67325 5.72634 5.12659 5.29301C5.33325 5.11968 5.5066 4.89967 5.63993 4.65967C5.87993 4.253 6.01325 3.77299 5.99992 3.27299C5.97992 2.49299 5.63326 1.80634 5.09326 1.33301H9.99992Z"
+                  stroke="currentColor"
+                  stroke-width="1.125"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.6666 9.33301V11.333C14.6666 12.4397 13.7733 13.333 12.6666 13.333H11.9999C11.9999 12.5997 11.3999 11.9997 10.6666 11.9997C9.93325 11.9997 9.33325 12.5997 9.33325 13.333H6.66659C6.66659 12.5997 6.06659 11.9997 5.33325 11.9997C4.59992 11.9997 3.99992 12.5997 3.99992 13.333H3.33325C2.22659 13.333 1.33325 12.4397 1.33325 11.333V9.33301H8.66659C9.39992 9.33301 9.99992 8.73301 9.99992 7.99967V3.33301H11.2266C11.7066 3.33301 12.1466 3.59301 12.3866 4.00635L13.5266 5.99967H12.6666C12.2999 5.99967 11.9999 6.29967 11.9999 6.66634V8.66634C11.9999 9.03301 12.2999 9.33301 12.6666 9.33301H14.6666Z"
+                  stroke="currentColor"
+                  stroke-width="1.125"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.33333 14.6667C6.06971 14.6667 6.66667 14.0697 6.66667 13.3333C6.66667 12.597 6.06971 12 5.33333 12C4.59695 12 4 12.597 4 13.3333C4 14.0697 4.59695 14.6667 5.33333 14.6667Z"
+                  stroke="currentColor"
+                  stroke-width="1.125"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.6666 14.6667C11.403 14.6667 11.9999 14.0697 11.9999 13.3333C11.9999 12.597 11.403 12 10.6666 12C9.93021 12 9.33325 12.597 9.33325 13.3333C9.33325 14.0697 9.93021 14.6667 10.6666 14.6667Z"
+                  stroke="currentColor"
+                  stroke-width="1.125"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.6667 8V9.33333H12.6667C12.3 9.33333 12 9.03333 12 8.66667V6.66667C12 6.3 12.3 6 12.6667 6H13.5267L14.6667 8Z"
+                  stroke="currentColor"
+                  stroke-width="1.125"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.00008 3.33268C6.00008 4.13268 5.64676 4.84602 5.09342 5.33268C4.62009 5.74602 4.00675 5.99935 3.33341 5.99935C1.86008 5.99935 0.666748 4.80602 0.666748 3.33268C0.666748 2.49268 1.05341 1.73935 1.66675 1.25269C2.12675 0.886019 2.70675 0.666016 3.33341 0.666016C4.80675 0.666016 6.00008 1.85935 6.00008 3.33268Z"
+                  stroke="currentColor"
+                  stroke-width="1.125"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.50008 2.49902V3.49902L2.66675 3.99902"
+                  stroke="currentColor"
+                  stroke-width="1.125"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <p class="text-xs 435px:text-sm truncate sm:text-base mr-1">
+              ارسال توسط:
+            </p>
+            <span class="text-xs sm:text-sm truncate">انبار تهران</span>
+          </div>
+
+          <div class="flex items-center gap-x-1 col-span-2 place-self-center">
+            <span
+              class="inline-block mb-2 bg-gray-200 relative w-5 h-5 xl:w-6 xl:h-6 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                class="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 absolute top-1 xl:top-1.5 z-10 right-1 xl:right-1.5"
+                fill="none"
+              >
+                <path
+                  d="M7.43053 1.57973L3.89594 2.91139C3.08136 3.21598 2.41553 4.17931 2.41553 5.04348V10.3064C2.41553 11.1422 2.96803 12.2401 3.64094 12.7431L6.68678 15.0168C7.68553 15.7676 9.32886 15.7676 10.3276 15.0168L13.3734 12.7431C14.0464 12.2401 14.5989 11.1422 14.5989 10.3064V5.04348C14.5989 4.17223 13.933 3.20889 13.1184 2.90431L9.58386 1.57973C8.98178 1.36014 8.01844 1.36014 7.43053 1.57973Z"
+                  stroke="currentColor"
+                  stroke-width="1.0625"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <p class="text-xs 435px:text-sm sm:text-base mr-1">گارانتی:</p>
+            <span class="text-xs 435px:text-sm truncate">۱۸ ماه زرین خدمت</span>
+          </div>
+        </div>
+
+        <!-- product Information -->
         <div></div>
       </div>
     </div>
+
     <nav
       class="w-full border-t border-gray-300 px-2 z-50 shadow-2xl flex items-center justify-between bg-white rounded-t-lg sticky bottom-0 md:hidden mt-4"
     >

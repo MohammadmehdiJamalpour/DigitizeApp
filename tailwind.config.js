@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["vazir"],
+        rubik: ["Rubik", "sans-serif"],
       },
       fontFamily: {
-        rubik: ["Rubik", "sans-serif"],
+        sans: ["vazir"],
       },
       screens: {
         xs: "378px",
